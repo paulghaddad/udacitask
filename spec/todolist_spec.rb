@@ -19,6 +19,16 @@ describe TodoList do
     end
   end
 
+  describe "#rename_list" do
+    it "allows you to rename the list" do
+      todolist = create_todolist("Original name")
+
+      todolist.title = "New name"
+
+      expect(todolist.title).to match(/New name/)
+    end
+  end
+
   describe "#add_item" do
     it "adds an item to the todolist" do
       todolist = create_todolist
@@ -29,9 +39,26 @@ describe TodoList do
     end
   end
 
+  describe "#remove_item" do
+    it "removes an item from the list" do
+      todolist = create_todolist
+      todolist.add_item("Item 1")
+      todolist.add_item("Item 2")
+      todolist.add_item("Item 3")
+
+      todolist.remove_item("Item 2")
+
+      expect(todolist.items.size).to eq(2)
+    end
+  end
+
   private
 
-  def create_todolist(description = "My new list")
-    TodoList.new(description)
+  def create_todolist(title = "My new list")
+    TodoList.new(title)
+  end
+
+  def create_todo(description = "Item")
+    Item.new("description")
   end
 end
