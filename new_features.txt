@@ -1,0 +1,3 @@
+Feature #1: Add ability to import and export todolists as files
+Feature #2: Add ability to import and export todolists in JSON
+Feature #3: Add multiple owners for an item
