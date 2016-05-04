@@ -27,10 +27,19 @@ class TodoList
 end
 
 class Item
-  attr_reader :description, :completed_status
+  attr_reader :description
+  attr_accessor :completed_status
 
   def initialize(item_description)
     @description = item_description
     @completed_status = false
+  end
+
+  def completed
+    self.completed_status = true
+  end
+
+  def not_completed
+    self.completed_status = false
   end
 end
