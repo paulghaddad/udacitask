@@ -1,4 +1,3 @@
-require 'pry'
 class TodoList
   attr_reader :items
   attr_accessor :title
@@ -17,6 +16,16 @@ class TodoList
     items.delete_if do |item|
       same_item?(item, item_description)
     end
+  end
+
+  def print_todolist
+    puts "_" * title.length
+    puts title
+    puts "_" * title.length
+    items.each_with_index do |item, index|
+      puts "#{index + 1} - #{item}"
+    end
+    puts
   end
 
   private
@@ -41,5 +50,9 @@ class Item
 
   def not_completed
     self.completed_status = false
+  end
+
+  def to_s
+    "#{description.ljust(16)} Completed: #{completed_status}"
   end
 end

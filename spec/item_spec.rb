@@ -40,6 +40,13 @@ describe Item do
     end
   end
 
+  describe "#to_s" do
+    it "outputs a formatted string with the item description and completion status" do
+      item = create_item("Item 1")
+
+      expect { puts item }.to output("Item 1           Completed: false\n").to_stdout
+    end
+  end
   private
 
   def create_item(description = "Item")

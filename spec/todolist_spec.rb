@@ -52,13 +52,32 @@ describe TodoList do
     end
   end
 
+  describe "#print_todolist" do
+    it "prints a formatted todolist" do
+      todolist = TodoList.new("My New List")
+      todolist.add_item("Item 1")
+      todolist.add_item("Item 2")
+      todolist.add_item("Item 3")
+
+      expect { todolist.print_todolist }.to output(printed_todolist).to_stdout
+    end
+  end
+
   private
 
   def create_todolist(title = "My new list")
     TodoList.new(title)
   end
 
-  def create_todo(description = "Item")
-    Item.new("description")
+  def printed_todolist
+<<-PRINTED_TODOLIST
+___________
+My New List
+___________
+1 - Item 1           Completed: false
+2 - Item 2           Completed: false
+3 - Item 3           Completed: false
+
+PRINTED_TODOLIST
   end
 end
