@@ -42,10 +42,11 @@ describe Item do
   end
 
   describe "#to_s" do
-    it "outputs a formatted string with the item description and completion status" do
+    it "outputs a formatted string with the item description, completion status, and user assigned" do
       item = create_item("Item 1")
+      item.assign_user("Paul")
 
-      expect { puts item }.to output("Item 1           Completed: false\n").to_stdout
+      expect { puts item }.to output("Item 1           Completed: false  Assignee: Paul\n").to_stdout
     end
   end
 
@@ -56,23 +57,19 @@ describe Item do
 
       item.assign_user(user)
 
-      expect(item.users).to include(user)
+      expect(item.assigned_user).to eq(user)
     end
   end
 
   describe "#remove_user" do
     it "removes a specific user from an item" do
       item = create_item
-      user_1 = create_user("Mike")
-      user_2 = create_user("Joe")
-      user_3 = create_user("Bob")
-      item.assign_user(user_1)
-      item.assign_user(user_2)
-      item.assign_user(user_3)
+      user = create_user("Mike")
+      item.assign_user(user)
 
-      item.remove_user("Joe")
+      item.remove_user("Mike")
 
-      expect(item.users).to_not include(user_2)
+      expect(item.assigned_user).to_not eq(user)
     end
   end
 

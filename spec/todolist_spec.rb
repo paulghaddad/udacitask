@@ -74,9 +74,9 @@ describe TodoList do
 ___________
 My New List
 ___________
-1 - Item 1           Completed: false
-2 - Item 2           Completed: false
-3 - Item 3           Completed: false
+1 - Item 1           Completed: false  Assignee: None
+2 - Item 2           Completed: false  Assignee: None
+3 - Item 3           Completed: false  Assignee: None
 
 PRINTED_TODOLIST
   end
