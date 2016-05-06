@@ -5,6 +5,7 @@ class TodoList
   def initialize(list_title)
     @title = list_title
     @items = Array.new
+    @exporter = Exporter.new
   end
 
   def add_item(new_item)
@@ -18,10 +19,8 @@ class TodoList
     end
   end
 
-  def print_todolist
-    print_todolist_header
-    print_todolist_items
-    puts
+  def export_to_standard_out
+    exporter.export(StandardOutExporter.new, self)
   end
 
   private
@@ -30,21 +29,6 @@ class TodoList
     item.description == item_description
   end
 
-  def print_todolist_header
-    print_header_border
-    puts title
-    print_header_border
-  end
-
-  def print_header_border
-    puts "_" * title.length
-  end
-
-  def print_todolist_items
-    items.each_with_index do |item, index|
-      puts "#{index + 1} - #{item}"
-    end
-  end
 end
 
 class Item

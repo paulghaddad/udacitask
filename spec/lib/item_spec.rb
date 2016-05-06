@@ -1,5 +1,4 @@
-require "./todolist"
-require "./user"
+require "spec_helper"
 
 describe Item do
   context "initialized" do
