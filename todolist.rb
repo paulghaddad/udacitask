@@ -1,3 +1,5 @@
+require "pry"
+
 class TodoList
   attr_reader :items
   attr_accessor :title
@@ -48,12 +50,13 @@ class TodoList
 end
 
 class Item
-  attr_reader :description
+  attr_reader :description, :users
   attr_accessor :completed_status
 
   def initialize(item_description)
     @description = item_description
     @completed_status = false
+    @users = []
   end
 
   def completed
@@ -66,5 +69,15 @@ class Item
 
   def to_s
     "#{description.ljust(16)} Completed: #{completed_status}"
+  end
+
+  def assign_user(user)
+    users << user
+  end
+
+  def remove_user(name)
+    users.reject! do |user|
+      user.name == name
+    end
   end
 end

@@ -1,4 +1,5 @@
 require "./todolist"
+require "./user"
 
 describe Item do
   context "initialized" do
@@ -47,9 +48,41 @@ describe Item do
       expect { puts item }.to output("Item 1           Completed: false\n").to_stdout
     end
   end
+
+  describe "#assign_user" do
+    it "assigns a user to an item" do
+      item = create_item
+      user = create_user
+
+      item.assign_user(user)
+
+      expect(item.users).to include(user)
+    end
+  end
+
+  describe "#remove_user" do
+    it "removes a specific user from an item" do
+      item = create_item
+      user_1 = create_user("Mike")
+      user_2 = create_user("Joe")
+      user_3 = create_user("Bob")
+      item.assign_user(user_1)
+      item.assign_user(user_2)
+      item.assign_user(user_3)
+
+      item.remove_user("Joe")
+
+      expect(item.users).to_not include(user_2)
+    end
+  end
+
   private
 
   def create_item(description = "Item")
     Item.new(description)
+  end
+
+  def create_user(name = "Paul")
+    User.new(name)
   end
 end
