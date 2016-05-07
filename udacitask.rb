@@ -1,4 +1,4 @@
-require_relative 'lib/todolist.rb'
+require './lib/todolist.rb'
 
 class Udacitask
   # Creates a new todo list
