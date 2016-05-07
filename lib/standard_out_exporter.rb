@@ -17,7 +17,7 @@ class StandardOutExporter
   end
 
   def print_header_border
-    puts "_" * todolist.title.length
+    puts "-" * todolist.title.length
   end
 
   def print_items

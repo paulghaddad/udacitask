@@ -1,5 +1,8 @@
+require "./lib/exporter"
+require "./lib/standard_out_exporter"
+
 class TodoList
-  attr_reader :items
+  attr_reader :items, :exporter
   attr_accessor :title
 
   def initialize(list_title)
@@ -23,12 +26,13 @@ class TodoList
     exporter.export(StandardOutExporter.new, self)
   end
 
+  alias_method :print_todolist, :export_to_standard_out
+
   private
 
   def same_item?(item, item_description)
     item.description == item_description
   end
-
 end
 
 class Item
