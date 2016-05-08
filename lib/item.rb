@@ -1,5 +1,5 @@
 class Item
-  attr_reader :description, :users
+  attr_reader :description
   attr_accessor :completed_status, :assigned_user
 
   def initialize(item_description)

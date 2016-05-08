@@ -1,5 +1,7 @@
+require "./lib/item"
 require "./lib/exporter"
-require "./lib/standard_out_exporter"
+require "./lib/exporters/standard_out_exporter"
+require "./lib/exporters/json_exporter"
 
 class TodoList
   attr_reader :items, :exporter
@@ -27,6 +29,10 @@ class TodoList
   end
 
   alias_method :print_todolist, :export_to_standard_out
+
+  def export_to_json(filename = "json_export.json")
+    exporter.export(JsonExporter.new(filename), self)
+  end
 
   private
 

@@ -48,4 +48,8 @@ class Udacitask
   # Print the list
 
   todolist.print_todolist
+
+  # Export as JSON file
+
+  todolist.export_to_json("udacitask_json_file.json")
 end
