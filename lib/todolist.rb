@@ -1,4 +1,3 @@
-require "./lib/item"
 require "./lib/exporter"
 require "./lib/exporters/standard_out_exporter"
 require "./lib/exporters/json_exporter"
@@ -13,8 +12,7 @@ class TodoList
     @exporter = Exporter.new
   end
 
-  def add_item(new_item)
-    item = Item.new(new_item)
+  def add_item(item)
     @items.push(item)
   end
 

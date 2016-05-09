@@ -29,12 +29,6 @@ describe Udacitask do
 
     expect(todolist.title).to match(/My New List/)
     expect(todolist.items.size).to eq(3)
-
-    items = todolist.items
-
-    expect(items[0].description).to match(/Item 1/)
-    expect(items[0].completed_status).to be false
-    expect(items[0].assignee).to match(/None/)
   end
 
   private

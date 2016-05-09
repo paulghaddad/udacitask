@@ -1,5 +1,5 @@
 class Parser
-  def parse(parser, file)
-    parser.parse(file)
+  def parse(parser)
+    parser.parse
   end
 end

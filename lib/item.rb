@@ -1,10 +1,11 @@
 class Item
   attr_reader :description
-  attr_accessor :completed_status, :assigned_user
+  attr_accessor :completed_status, :assignee
 
   def initialize(item_description)
     @description = item_description
     @completed_status = false
+    @assignee = "None"
   end
 
   def completed
@@ -16,14 +17,14 @@ class Item
   end
 
   def to_s
-    "#{description.ljust(16)} Completed: #{completed_status}  Assignee: #{assigned_user || "None"}"
+    "#{description.ljust(16)} Completed: #{completed_status}  Assignee: #{assignee}"
   end
 
   def assign_user(user)
-    self.assigned_user = user
+    self.assignee = user
   end
 
   def remove_user(name)
-    self.assigned_user = nil
+    self.assignee = nil
   end
 end
