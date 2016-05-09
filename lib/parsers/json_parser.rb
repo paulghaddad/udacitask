@@ -1,6 +1,5 @@
 require "json"
 require "todolist"
-require "pry"
 
 class JsonParser
   attr_reader :file, :parsed_json_file

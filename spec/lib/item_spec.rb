@@ -56,7 +56,7 @@ describe Item do
 
       item.assign_user(user)
 
-      expect(item.assigned_user).to eq(user)
+      expect(item.assignee).to eq(user)
     end
   end
 
@@ -68,7 +68,7 @@ describe Item do
 
       item.remove_user("Mike")
 
-      expect(item.assigned_user).to_not eq(user)
+      expect(item.assignee).to_not eq(user)
     end
   end
 

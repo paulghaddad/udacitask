@@ -33,7 +33,7 @@ class JsonExporter
 
   def items_as_json(items)
     items.map do |item|
-      {"description"=>item.description,"completed_status"=>item.completed_status,"assignee"=>"#{item.assigned_user || "None"}"}
+      {"description"=>item.description,"completed_status"=>item.completed_status,"assignee"=>item.assignee}
     end
   end
 end

@@ -24,10 +24,14 @@ describe JsonExporter do
 
   def create_todolist_with_items
     todolist = TodoList.new("My New List")
-    todolist.add_item("Item 1")
-    todolist.add_item("Item 2")
-    todolist.add_item("Item 3")
+    todolist.add_item(create_item("Item 1"))
+    todolist.add_item(create_item("Item 2"))
+    todolist.add_item(create_item("Item 3"))
     todolist.items.first.assign_user("Paul")
     todolist
+  end
+
+  def create_item(description)
+    Item.new(description)
   end
 end

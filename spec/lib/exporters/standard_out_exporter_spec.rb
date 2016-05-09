@@ -14,11 +14,16 @@ describe StandardOutExporter do
 
   def create_todolist_with_items
     todolist = TodoList.new("My New List")
-    todolist.add_item("Item 1")
-    todolist.add_item("Item 2")
-    todolist.add_item("Item 3")
+    ["Item 1", "Item 2", "Item 3"].each do |description|
+      item = create_item(description)
+      todolist.add_item(item)
+    end
     todolist.items.first.assign_user("Paul")
     todolist
+  end
+
+  def create_item(description)
+    Item.new(description)
   end
 
   def formatted_todolist

@@ -35,10 +35,14 @@ describe Udacitask do
 
   def create_todolist
     todolist = TodoList.new("My New List")
-    todolist.add_item("Item 1")
-    todolist.add_item("Item 2")
-    todolist.add_item("Item 3")
+    todolist.add_item(create_item("Item 1"))
+    todolist.add_item(create_item("Item 2"))
+    todolist.add_item(create_item("Item 3"))
     todolist
+  end
+
+  def create_item(description)
+    Item.new(description)
   end
 
   def formatted_todolist

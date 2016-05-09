@@ -1,4 +1,5 @@
-require './lib/todolist.rb'
+require "./lib/todolist"
+require "./lib/item"
 
 class Udacitask
   # Creates a new todo list
@@ -6,11 +7,14 @@ class Udacitask
   todolist = TodoList.new("My New List")
 
   # Add four new items
-
-  todolist.add_item("Item 1")
-  todolist.add_item("Item 2")
-  todolist.add_item("Item 3")
-  todolist.add_item("Item 4")
+  item_1 = Item.new("Item 1")
+  todolist.add_item(item_1)
+  item_2 = Item.new("Item 2")
+  todolist.add_item(item_2)
+  item_3 = Item.new("Item 3")
+  todolist.add_item(item_3)
+  item_4 = Item.new("Item 4")
+  todolist.add_item(item_4)
 
   # Print the list
 
