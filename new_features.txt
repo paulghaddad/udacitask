@@ -1,3 +1,3 @@
 Feature #1: Add an assigned user for an item
-Feature #2: Add ability to export todolists as CSV files
-Feature #3: Add ability to export todolists as JSON files
+Feature #2: Add ability to export todolists as JSON files
+Feature #3: Add ability to import todolists as JSON files

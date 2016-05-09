@@ -20,6 +20,10 @@ describe Udacitask do
     File.delete(filename)
   end
 
+  it "imports a list from a JSON file" do
+    
+  end
+
   private
 
   def create_todolist
