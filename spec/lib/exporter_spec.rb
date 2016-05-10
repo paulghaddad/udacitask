@@ -11,5 +11,15 @@ describe Exporter do
 
       expect(standard_out_exporter).to have_received(:export).with(todolist)
     end
+
+    it "exports as JSON if it receives a JSON Exporter" do
+      exporter = Exporter.new
+      json_exporter = spy(JsonExporter)
+      todolist = double("Todolist")
+
+      exporter.export(json_exporter, todolist)
+
+      expect(json_exporter).to have_received(:export).with(todolist)
+    end
   end
 end

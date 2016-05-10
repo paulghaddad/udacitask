@@ -1,0 +1,110 @@
+commit f4c462de2ded72220b3eabaec5799a913d90c041
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Mon May 9 08:18:27 2016 -0500
+
+    Complete JSON parsing functionality
+
+commit 4e72405638f29877faf02a07a2ce444cbb6d1f04
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Mon May 9 07:59:39 2016 -0500
+
+    Get JSON parser working
+
+commit 141764395e07ee1b77f5e9fb3818144a885474cc
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Mon May 9 07:23:29 2016 -0500
+
+    Build generic Parser class
+
+commit 72367aa38bfdd45b71be7ef477b7d180219f6b14
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Mon May 9 06:49:20 2016 -0500
+
+    Create sample json file for parsing
+
+commit aa05d0b925a1baf866d8fcae1f692bd14821b15b
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Sun May 8 10:48:24 2016 -0500
+
+    Add JSON exporter component
+
+commit fc6e792106bd12d4f59e2738fa1651ed1ff6e202
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Sat May 7 10:20:00 2016 -0500
+
+    Move Item class to its own file
+
+commit 51ddafd2a94077bc6530f8d9014069d24cca8281
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Sat May 7 10:16:31 2016 -0500
+
+    Create overall integration test for end-to-end coverage and general
+    refactoring
+
+commit 629ffdce645a3ebb2c8d4559b8a19895343a7ddc
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Fri May 6 08:05:47 2016 -0500
+
+    Create Polymorphic Exporter class and export to SO functionality
+    * Also clean up specs
+
+commit 99e67482911b35d5f22d8386ad992c8278229032
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Fri May 6 06:57:08 2016 -0500
+
+    Refactor Assigned User feature
+
+commit 759985fda7aa423794bfb0fee814e890e8c87aee
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Fri May 6 06:46:48 2016 -0500
+
+    Complete assigning and unassigning users to an item
+
+commit 050de68483ef2e4aa02795f2f6befdf1bda38318
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Wed May 4 08:09:24 2016 -0500
+
+    Refactor print methods and add features to features.txt
+
+commit f270b8c876e74eb0e316a73915d735c2964fcf35
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Wed May 4 07:59:45 2016 -0500
+
+    Print todolist and add tasks to Udacitask
+
+commit b64f7d7baa2d195c62f0c3a9fff1096f61f23da0
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Wed May 4 07:14:43 2016 -0500
+
+    Add #completed and #not_completed methods to Item
+
+commit 3a270540d16eb33482d0f0630cc6c67d5d603e21
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Wed May 4 07:08:18 2016 -0500
+
+    Add #remove_item method
+
+commit 336c5897fd7ef4fabda65480fa4432a0c237eaff
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Tue May 3 07:25:30 2016 -0500
+
+    Add tests for todolist and item classes
+
+commit 6f07e94f5cfab99e605b67d42261af6be5bcbf39
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Tue May 3 07:05:34 2016 -0500
+
+    Add Gemfile for RSpec and Pry
+
+commit fe664dda8f4f81b0cc03b1f945f7e45a8f888669
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Tue May 3 07:03:13 2016 -0500
+
+    Create initial TodoList and Item classes from Prep lesson; add
+    new_features.txt
+
+commit aa6d49441ff7c5c0195529af2f40610a1e9aeca8
+Author: Paul Haddad <paulh16@gmail.com>
+Date:   Tue May 3 06:41:11 2016 -0500
+
+    Initial commit

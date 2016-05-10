@@ -16,15 +16,15 @@ class Item
     self.completed_status = false
   end
 
-  def to_s
-    "#{description.ljust(16)} Completed: #{completed_status}  Assignee: #{assignee}"
-  end
-
   def assign_user(user)
     self.assignee = user
   end
 
   def remove_user(name)
     self.assignee = nil
+  end
+
+  def to_s
+    "#{description.ljust(16)} Completed: #{completed_status}  Assignee: #{assignee}"
   end
 end

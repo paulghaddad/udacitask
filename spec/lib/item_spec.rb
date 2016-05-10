@@ -17,6 +17,14 @@ describe Item do
 
       expect(completed_status).to be false
     end
+
+    it "has a default assignee as None" do
+      item = create_item
+
+      assignee = item.assignee
+
+      expect(assignee).to eq("None")
+    end
   end
 
   describe "#completed" do

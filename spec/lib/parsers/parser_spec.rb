@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Parser do
   describe "#parse" do
-    it "delegates the #parse method to specific parser class" do
+    it "delegates the #parse method to a specific parser class" do
       specific_parser = spy("ParserInstance")
       allow(specific_parser).to receive(:parse)
       generic_parser = Parser.new
